@@ -4,7 +4,7 @@ namespace ValidateOnLoad
 {
     public class DataFormBehavior : Behavior<ContentPage>
     {
-        private SfDataForm dataForm;
+        private SfDataForm? dataForm;
         protected override void OnAttachedTo(ContentPage bindable)
         {
             base.OnAttachedTo(bindable);
@@ -18,9 +18,9 @@ namespace ValidateOnLoad
             }
         }
 
-        private void OnLoaded(object sender, EventArgs e)
+        private void OnLoaded(object? sender, EventArgs e)
         {
-            this.dataForm.Validate();
+            this.dataForm?.Validate();
         }
 
         protected override void OnDetachingFrom(ContentPage bindable)
